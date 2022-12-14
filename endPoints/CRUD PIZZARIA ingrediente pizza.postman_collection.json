@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "2697170b-e21d-4ba7-a0a6-c4f8379649f6",
+		"name": "CRUD PIZZARIA ingrediente pizza",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23125744"
+	},
+	"item": [
+		{
+			"name": "CRUD PIZZARIA ingrediente pizza",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ingredientes\": \"Tomate\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/v1/ingrediente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"ingrediente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PEGAR TODOS OS INGREDIENTES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/ingrediente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"ingrediente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "APAGAR INGREDIENTE",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

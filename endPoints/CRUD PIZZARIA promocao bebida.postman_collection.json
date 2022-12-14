@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "98c822ab-c52f-4366-b80d-96e32f117819",
+		"name": "CRUD PIZZARIA promocao bebida",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23125744"
+	},
+	"item": [
+		{
+			"name": "Adicionar uma promocao de bebida",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

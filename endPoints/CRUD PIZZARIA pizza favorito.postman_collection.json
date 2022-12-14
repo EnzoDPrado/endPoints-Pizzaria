@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "f9148e42-a87a-4620-89a5-74f88512aaae",
+		"name": "CRUD PIZZARIA pizza favorito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23125744"
+	},
+	"item": [
+		{
+			"name": "Adicionar pizza favorito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id_pizza\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaFavorita",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaFavorita"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Adicionar pizza favorito",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_pizza\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaFavorita",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaFavorita"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-lSIGY93elv9paSdtQocuMwX3Z4Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 10:53:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Item criado com sucesso no Banco de Dados\""
+				}
+			]
+		},
+		{
+			"name": "buscar pizza favorito pelo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaFavorito/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaFavorito",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "buscar pizza favorito pelo id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaFavorito/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaFavorito",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "101"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"65-ozY7nIeY5MHztdqd9XefR6kSd50\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 11:02:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"pizzasFavorita\": [\n        {\n            \"IDFavorito\": 3,\n            \"pizzaSabor\": \"Marguerita\",\n            \"tamanhoPizza\": null,\n            \"precoPizza\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "buscar todas as pizzas favoritas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaFavorito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaFavorito"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "buscar todas as pizzas favoritas",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaFavorito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaFavorito"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "345"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"159-uarEI3nAVuk1K0fNLiABwOQ9dTM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 11:09:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"pizzasFavoritas\": [\n        {\n            \"IDFavorito\": 1,\n            \"pizzaSabor\": \"Marguerita\",\n            \"tamanhoPizza\": null,\n            \"precoPizza\": null\n        },\n        {\n            \"IDFavorito\": 2,\n            \"pizzaSabor\": \"Marguerita\",\n            \"tamanhoPizza\": null,\n            \"precoPizza\": null\n        },\n        {\n            \"IDFavorito\": 3,\n            \"pizzaSabor\": \"Marguerita\",\n            \"tamanhoPizza\": null,\n            \"precoPizza\": null\n        },\n        {\n            \"IDFavorito\": 4,\n            \"pizzaSabor\": \"Marguerita\",\n            \"tamanhoPizza\": null,\n            \"precoPizza\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Atualizar alguma pizza favorito",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id_pizza\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaFavorito/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaFavorito",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir alguma pizza favorito",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaFavorito/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaFavorito",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

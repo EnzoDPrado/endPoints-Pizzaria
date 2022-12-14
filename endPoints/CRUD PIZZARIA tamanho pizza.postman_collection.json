@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "3655cc8b-90d0-45ef-b4f5-53575614aa6e",
+		"name": "CRUD PIZZARIA tamanho pizza",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23125744"
+	},
+	"item": [
+		{
+			"name": "Endpoint para inserir uma novo tamanho de pizza",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tamanho\": \"giga\",\n    \"preco\": 100.00     \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/v1/tamanhoPizza",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"tamanhoPizza"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET TAMANHOS DE PIZZAS",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

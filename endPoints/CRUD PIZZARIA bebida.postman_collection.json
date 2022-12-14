@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "f5e4688d-be60-44ac-acfd-9b7893087f57",
+		"name": "CRUD PIZZARIA bebida",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23125744"
+	},
+	"item": [
+		{
+			"name": "Adicionar uma bebida",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"preco\": 10.9,\r\n    \"volume\": \"500ml\",\r\n    \"id_tipo_bebida\": 1,\r\n    \"id_sabor_bebida\": 1,\r\n    \"id_marca_bebida\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/v1/bebida",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"bebida"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Adicionar uma bebida",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"preco\": 10.9,\r\n    \"volume\": \"500ml\",\r\n    \"id_tipo_bebida\": 1,\r\n    \"id_sabor_bebida\": 1,\r\n    \"id_marca_bebida\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/bebida",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"bebida"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-lSIGY93elv9paSdtQocuMwX3Z4Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Dec 2022 17:07:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Item criado com sucesso no Banco de Dados\""
+				}
+			]
+		},
+		{
+			"name": "Buscar uma bebida pelo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/bebida/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"bebida",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Buscar uma bebida pelo id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/bebida/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"bebida",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "94"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5e-tub+vG+wdKs+t2+T541imbsJjxw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Dec 2022 17:12:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"bebida\": [\n        {\n            \"tipo\": \"Suco\",\n            \"sabor\": \"Uva\",\n            \"marca\": \"La Pizzaria\",\n            \"preco\": 10.5,\n            \"volume\": \"500ml\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Buscar todas as bebidas existentes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/bebida",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"bebida"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Buscar todas as bebidas existentes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/bebida",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"bebida"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "174"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ae-GwyYdy5Q+a/PV9cV8zH1SuCdDYE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Dec 2022 17:17:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"bebidas\": [\n        {\n            \"tipo\": \"Suco\",\n            \"sabor\": \"Uva\",\n            \"marca\": \"La Pizzaria\",\n            \"preco\": 10.5,\n            \"volume\": \"500ml\"\n        },\n        {\n            \"tipo\": \"Suco\",\n            \"sabor\": \"Uva\",\n            \"marca\": \"Del Vale\",\n            \"preco\": 10.9,\n            \"volume\": \"500ml\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "atualizar alguma bebida",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{ \r\n    \"preco\": 5.5,\r\n    \"volume\": \"500ml\",\r\n    \"id_tipo_bebida\": 1,\r\n    \"id_sabor_bebida\": 1,\r\n    \"id_marca_bebida\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/v1/bebida/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"bebida",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "atualizar alguma bebida",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{ \r\n    \"preco\": 5.5,\r\n    \"volume\": \"500ml\",\r\n    \"id_tipo_bebida\": 1,\r\n    \"id_sabor_bebida\": 1,\r\n    \"id_marca_bebida\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/bebida/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"bebida",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f-puQZlikFGMp4CKWRAnYcEeGUa6I\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Dec 2022 17:37:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Item atualizado com sucesso no Banco de Dados\""
+				}
+			]
+		},
+		{
+			"name": "Excluir alguma bebida",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/bebida/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"bebida",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

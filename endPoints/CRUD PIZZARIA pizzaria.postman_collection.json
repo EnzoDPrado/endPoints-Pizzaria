@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "1af4f8fa-fac0-402d-8192-bf28a6ecd26a",
+		"name": "CRUD PIZZARIA pizzaria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23125744"
+	},
+	"item": [
+		{
+			"name": "Adicionar uma pizzaria",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"La Pizzaria\",\r\n    \"rua\":\"Oliveira Lima\",\r\n    \"bairro\": \"Jd. Santo Antônio\",\r\n    \"cep\": \"0739-749\",\r\n    \"cidade\":\"Osasco\",\r\n    \"email\":\"laPizzaria@gmail.com\",\r\n    \"telefone\": \"3655-0900\",\r\n    \"celular\":\"(11)99021-6755\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaria"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Adicionar uma pizzaria",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"La Pizzaria\",\r\n    \"rua\":\"Oliveira Lima\",\r\n    \"bairro\": \"Jd. Santo Antônio\",\r\n    \"cep\": \"0739-749\",\r\n    \"cidade\":\"Osasco\",\r\n    \"email\":\"laPizzaria@gmail.com\",\r\n    \"telefone\": \"3655-0900\",\r\n    \"celular\":\"(11)99021-6755\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaria"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-lSIGY93elv9paSdtQocuMwX3Z4Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Dec 2022 22:09:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Item criado com sucesso no Banco de Dados\""
+				}
+			]
+		},
+		{
+			"name": "buscar pizzaria pelo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaria/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaria",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "buscar pizzaria pelo id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaria/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaria",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d4-V3sqjDvZajBrwtbCmZ5GxEwV86U\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Dec 2022 22:12:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"pizzaria\": [\n        {\n            \"id\": 2,\n            \"nome\": \"La Pizzaria\",\n            \"rua\": \"Oliveira Lima\",\n            \"bairro\": \"Jd. Santo Antônio\",\n            \"cep\": \"0739-749\",\n            \"cidade\": \"Osasco\",\n            \"email\": \"laPizzaria@gmail.com\",\n            \"telefone\": \"3655-0900\",\n            \"celular\": \"(11)99021-6755\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "buscar todas as pizzarias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaria"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "buscar todas as pizzarias",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaria"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "373"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"175-EgLUKsgqN9B4PQWCRPq9cqbxYss\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Dec 2022 22:18:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"saboresBebidas\": [\n        {\n            \"id\": 2,\n            \"nome\": \"La Pizzaria\",\n            \"rua\": \"Oliveira Lima\",\n            \"bairro\": \"Jd. Santo Antônio\",\n            \"cep\": \"0739-749\",\n            \"cidade\": \"Osasco\",\n            \"email\": \"laPizzaria@gmail.com\",\n            \"telefone\": \"3655-0900\",\n            \"celular\": \"(11)99021-6755\"\n        },\n        {\n            \"id\": 1,\n            \"nome\": \"La Pizzaria\",\n            \"rua\": \"Rua oliveira lima\",\n            \"bairro\": \"Santo antonio\",\n            \"cep\": \"06130-090\",\n            \"cidade\": \"\",\n            \"email\": null,\n            \"telefone\": null,\n            \"celular\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Atualizar uma pizzaria",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"La Pizzaria\",\r\n    \"rua\":\"Oliveira Lima\",\r\n    \"bairro\": \"Jd. Santo Antônio\",\r\n    \"cep\": \"0739-749\",\r\n    \"cidade\":\"Osasco\",\r\n    \"email\":\"laPizzaria@gmail.com\",\r\n    \"telefone\": \"3655-0900\",\r\n    \"celular\":\"(11)99021-6755\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaria/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaria",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Atualizar uma pizzaria",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"La Pizzaria\",\r\n    \"rua\":\"Oliveira Lima\",\r\n    \"bairro\": \"Jd. Santo Antônio\",\r\n    \"cep\": \"0739-749\",\r\n    \"cidade\":\"Osasco\",\r\n    \"email\":\"laPizzaria@gmail.com\",\r\n    \"telefone\": \"3655-0900\",\r\n    \"celular\":\"(11)99021-6755\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaria/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaria",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f-puQZlikFGMp4CKWRAnYcEeGUa6I\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Dec 2022 22:24:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Item atualizado com sucesso no Banco de Dados\""
+				}
+			]
+		},
+		{
+			"name": "Excluir  uma pizzaria",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaria/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaria",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Excluir  uma pizzaria",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaria/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaria",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2d-WquYDDTn/r6sjeS7TDJjgvFXLUw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Dec 2022 22:25:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Item excluido com sucesso no Banco de Dados\""
+				}
+			]
+		}
+	]
+}

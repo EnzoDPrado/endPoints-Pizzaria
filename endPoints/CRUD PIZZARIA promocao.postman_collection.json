@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "d6345a1b-50b2-48df-9dac-a476fde00ecb",
+		"name": "CRUD PIZZARIA promocao",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23125744"
+	},
+	"item": [
+		{
+			"name": "ADICIONAR UMA PROMOÇÃO DE PIZZA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"preco\": 30.5,\n    \"id_pizza\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaPromocao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaPromocao"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"preco\": 30.5,\n    \"id_pizza\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaPromocao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaPromocao"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-lSIGY93elv9paSdtQocuMwX3Z4Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 11:22:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Item criado com sucesso no Banco de Dados\""
+				}
+			]
+		},
+		{
+			"name": "buscar promocao pelo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaPromocao/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaPromocao",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "buscar promocao pelo id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaPromocao/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaPromocao",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"60-rmsuYwX5VxJVnhuL8IxSO8JseiA\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 11:24:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"pizzasPromocao\": [\n        {\n            \"IDPromocao\": 1,\n            \"preco\": 30.5,\n            \"pizzaSabor\": \"Marguerita\",\n            \"tamanhoPizza\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Buscar todas as promocoes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaPromocao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaPromocao"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Buscar todas as promocoes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaPromocao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaPromocao"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ad-YaCpwNWPTovHgTdDv6dzm/wRHac\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Dec 2022 11:25:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"pizzasPromocoes\": [\n        {\n            \"IDPromocao\": 1,\n            \"preco\": 30.5,\n            \"pizzaSabor\": \"Marguerita\",\n            \"tamanhoPizza\": null\n        },\n        {\n            \"IDPromocao\": 2,\n            \"preco\": 30.5,\n            \"pizzaSabor\": \"Marguerita\",\n            \"tamanhoPizza\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "DELETAR ALGUMA PROMOCAO",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaPromocao/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaPromocao",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

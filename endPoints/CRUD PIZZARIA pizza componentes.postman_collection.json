@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "0a5ca7fc-23f4-49ec-9b39-53c2a7a57d9e",
+		"name": "CRUD PIZZARIA pizza componentes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23125744"
+	},
+	"item": [
+		{
+			"name": "Adicionar pizza componentes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id_ingredientes_pizza\": 1,\n    \"id_pizza\":1,\n    \"id_tamanho_pizza\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaComponentes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaComponentes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Adicionar pizza componentes",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_ingredientes_pizza\": 1,\n    \"id_pizza\":1,\n    \"id_tamanho_pizza\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaComponentes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaComponentes"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-lSIGY93elv9paSdtQocuMwX3Z4Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Dec 2022 13:04:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Item criado com sucesso no Banco de Dados\""
+				}
+			]
+		},
+		{
+			"name": "buscar pizza pelo id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaComponentes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaComponentes",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "buscar pizza pelo id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaComponentes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaComponentes",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "381"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17d-rtEacm49HiccCL/+PWKWRQtpEVU\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Dec 2022 13:06:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"pizzaComponentes\": [\n        {\n            \"pizzaID\": 1,\n            \"sabor\": \"Marguerita\",\n            \"ingrediente\": \"Mussarela\",\n            \"tamanho\": \"Grande\",\n            \"preco\": 0\n        },\n        {\n            \"pizzaID\": 1,\n            \"sabor\": \"Marguerita\",\n            \"ingrediente\": \"Tomate\",\n            \"tamanho\": \"Grande\",\n            \"preco\": 0\n        },\n        {\n            \"pizzaID\": 1,\n            \"sabor\": \"Marguerita\",\n            \"ingrediente\": \"Manjericão\",\n            \"tamanho\": \"Grande\",\n            \"preco\": 0\n        },\n        {\n            \"pizzaID\": 1,\n            \"sabor\": \"Marguerita\",\n            \"ingrediente\": \"Parmesão\",\n            \"tamanho\": \"Grande\",\n            \"preco\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "buscar todas as pizzas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaComponentes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaComponentes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "buscar todas as pizzas",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5050/v1/pizzaComponentes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"v1",
+								"pizzaComponentes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE, OPTIONS"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "381"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17d-tz+Slma8yhYzyuPsGNVSx+kOTvo\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 12 Dec 2022 13:08:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"pizzaComponentes\": [\n        {\n            \"pizzaID\": 1,\n            \"sabor\": \"Marguerita\",\n            \"ingrediente\": \"Tomate\",\n            \"tamanho\": \"Grande\",\n            \"preco\": 0\n        },\n        {\n            \"pizzaID\": 1,\n            \"sabor\": \"Marguerita\",\n            \"ingrediente\": \"Manjericão\",\n            \"tamanho\": \"Grande\",\n            \"preco\": 0\n        },\n        {\n            \"pizzaID\": 1,\n            \"sabor\": \"Marguerita\",\n            \"ingrediente\": \"Parmesão\",\n            \"tamanho\": \"Grande\",\n            \"preco\": 0\n        },\n        {\n            \"pizzaID\": 1,\n            \"sabor\": \"Marguerita\",\n            \"ingrediente\": \"Mussarela\",\n            \"tamanho\": \"Grande\",\n            \"preco\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "deletar alguma pizza",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/pizzaComponentes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"pizzaComponentes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
